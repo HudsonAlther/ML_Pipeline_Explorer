@@ -1,0 +1,42 @@
+{
+  "model_info": {
+    "name": "logreg.l2_regularized",
+    "description": "L2-regularized logistic regression (Ridge)",
+    "pros": [
+      "Prevents overfitting",
+      "Stable solutions",
+      "Good generalization"
+    ],
+    "cons": [
+      "No feature selection",
+      "All features contribute"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 0.014600515365600586,
+    "timestamp": "2025-07-29T14:37:27.610975",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9761904761904762,
+    "roc_auc": 0.998740157480315,
+    "f1_score": 0.9765625,
+    "precision": 0.9541984732824428,
+    "recall": 1.0,
+    "cv_mean": 0.9701985123885525,
+    "cv_std": 0.008905537469244806
+  },
+  "model_parameters": {
+    "model_type": "logreg",
+    "variant": "l2_regularized"
+  }
+}

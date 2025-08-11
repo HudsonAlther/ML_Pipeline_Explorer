@@ -1,0 +1,16 @@
+{
+  "accuracy": 0.9801587301587301,
+  "f1_score": 0.9803921568627451,
+  "precision": 0.9615384615384616,
+  "recall": 1.0,
+  "roc_auc": 0.9986771653543307,
+  "target": "AboveAvg",
+  "n_samples_train": 1007,
+  "n_samples_test": 252,
+  "feature_names": [
+    "open",
+    "high",
+    "low",
+    "volume"
+  ]
+}

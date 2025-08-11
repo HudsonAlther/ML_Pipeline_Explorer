@@ -1,0 +1,43 @@
+{
+  "model_info": {
+    "name": "random_forest.deep",
+    "description": "Deep random forest with more trees",
+    "pros": [
+      "Higher capacity",
+      "Better for complex patterns",
+      "More robust"
+    ],
+    "cons": [
+      "Slower training",
+      "Higher memory usage",
+      "Risk of overfitting"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 0.21074366569519043,
+    "timestamp": "2025-07-29T14:37:37.583362",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9841269841269841,
+    "roc_auc": 0.9955905511811024,
+    "f1_score": 0.984251968503937,
+    "precision": 0.9689922480620154,
+    "recall": 1.0,
+    "cv_mean": 0.987084380079799,
+    "cv_std": 0.007447456115403882
+  },
+  "model_parameters": {
+    "model_type": "random_forest",
+    "variant": "deep"
+  }
+}

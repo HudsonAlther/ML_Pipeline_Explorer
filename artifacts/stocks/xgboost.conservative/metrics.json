@@ -1,0 +1,42 @@
+{
+  "model_info": {
+    "name": "xgboost.conservative",
+    "description": "Conservative XGBoost for stability",
+    "pros": [
+      "More stable",
+      "Less overfitting",
+      "Faster training"
+    ],
+    "cons": [
+      "Lower capacity",
+      "May underfit complex data"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 0.01611328125,
+    "timestamp": "2025-07-29T14:37:46.185565",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9841269841269841,
+    "roc_auc": 0.9989291338582676,
+    "f1_score": 0.984251968503937,
+    "precision": 0.9689922480620154,
+    "recall": 1.0,
+    "cv_mean": 0.9870893059455199,
+    "cv_std": 0.006748658956342113
+  },
+  "model_parameters": {
+    "model_type": "xgboost",
+    "variant": "conservative"
+  }
+}

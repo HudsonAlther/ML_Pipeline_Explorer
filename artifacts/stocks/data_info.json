@@ -1,0 +1,36 @@
+{
+  "dataset_info": {
+    "shape": [
+      1259,
+      5
+    ],
+    "columns": [
+      "open",
+      "high",
+      "low",
+      "volume",
+      "AboveAvg"
+    ],
+    "dtypes": {
+      "open": "float64",
+      "high": "float64",
+      "low": "float64",
+      "volume": "int64",
+      "AboveAvg": "int64"
+    },
+    "missing_values": {
+      "open": 0,
+      "high": 0,
+      "low": 0,
+      "volume": 0,
+      "AboveAvg": 0
+    },
+    "target_distribution": {
+      "0": 632,
+      "1": 627
+    },
+    "data_quality_score": 1.0
+  },
+  "dataset_description": "Predict whether closing price is above its series mean",
+  "business_value": "Directional price heuristic for retail traders"
+}

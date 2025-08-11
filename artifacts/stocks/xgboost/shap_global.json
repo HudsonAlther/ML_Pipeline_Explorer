@@ -1,0 +1,18 @@
+[
+  {
+    "feature":"num__low",
+    "mean_abs_shap":3.6547117233
+  },
+  {
+    "feature":"num__high",
+    "mean_abs_shap":3.6364970207
+  },
+  {
+    "feature":"num__volume",
+    "mean_abs_shap":0.3064955473
+  },
+  {
+    "feature":"num__open",
+    "mean_abs_shap":0.227220729
+  }
+]

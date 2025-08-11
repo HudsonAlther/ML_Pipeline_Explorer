@@ -1,0 +1,214 @@
+[
+  {
+    "feature":"num__duration",
+    "mean_abs_shap":5.0883766307
+  },
+  {
+    "feature":"cat__category_Dramas",
+    "mean_abs_shap":0.6992201108
+  },
+  {
+    "feature":"cat__category_Children & Family Movies",
+    "mean_abs_shap":0.5139476453
+  },
+  {
+    "feature":"cat__category_Documentaries",
+    "mean_abs_shap":0.5072680155
+  },
+  {
+    "feature":"cat__category_Comedies",
+    "mean_abs_shap":0.4660325651
+  },
+  {
+    "feature":"cat__category_International TV Shows",
+    "mean_abs_shap":0.3289999364
+  },
+  {
+    "feature":"cat__category_Kids' TV",
+    "mean_abs_shap":0.2553545975
+  },
+  {
+    "feature":"cat__category_Action & Adventure",
+    "mean_abs_shap":0.204093471
+  },
+  {
+    "feature":"cat__category_Stand-Up Comedy",
+    "mean_abs_shap":0.1617227889
+  },
+  {
+    "feature":"cat__rating_TV-Y",
+    "mean_abs_shap":0.1323607461
+  },
+  {
+    "feature":"cat__category_Crime TV Shows",
+    "mean_abs_shap":0.1297422081
+  },
+  {
+    "feature":"cat__rating_TV-14",
+    "mean_abs_shap":0.1097853015
+  },
+  {
+    "feature":"num__release_year",
+    "mean_abs_shap":0.0999952852
+  },
+  {
+    "feature":"cat__category_Docuseries",
+    "mean_abs_shap":0.0996670999
+  },
+  {
+    "feature":"cat__rating_TV-PG",
+    "mean_abs_shap":0.0942773115
+  },
+  {
+    "feature":"cat__category_British TV Shows",
+    "mean_abs_shap":0.0530238762
+  },
+  {
+    "feature":"cat__rating_TV-Y7",
+    "mean_abs_shap":0.0384606061
+  },
+  {
+    "feature":"cat__category_Reality TV",
+    "mean_abs_shap":0.0357190385
+  },
+  {
+    "feature":"cat__category_TV Comedies",
+    "mean_abs_shap":0.0354936909
+  },
+  {
+    "feature":"cat__category_Anime Series",
+    "mean_abs_shap":0.0334919397
+  },
+  {
+    "feature":"cat__rating_R",
+    "mean_abs_shap":0.0273790133
+  },
+  {
+    "feature":"cat__category_Horror Movies",
+    "mean_abs_shap":0.0170837413
+  },
+  {
+    "feature":"cat__rating_TV-MA",
+    "mean_abs_shap":0.0160075483
+  },
+  {
+    "feature":"cat__category_TV Dramas",
+    "mean_abs_shap":0.0143995573
+  },
+  {
+    "feature":"cat__rating_TV-G",
+    "mean_abs_shap":0.013967043
+  },
+  {
+    "feature":"cat__category_Movies",
+    "mean_abs_shap":0.0110783361
+  },
+  {
+    "feature":"cat__category_Stand-Up Comedy & Talk Shows",
+    "mean_abs_shap":0.0110115669
+  },
+  {
+    "feature":"cat__rating_PG",
+    "mean_abs_shap":0.0104583866
+  },
+  {
+    "feature":"cat__category_TV Action & Adventure",
+    "mean_abs_shap":0.0086794994
+  },
+  {
+    "feature":"cat__rating_PG-13",
+    "mean_abs_shap":0.0080072538
+  },
+  {
+    "feature":"cat__category_International Movies",
+    "mean_abs_shap":0.0073417324
+  },
+  {
+    "feature":"cat__rating_G",
+    "mean_abs_shap":0.0047017192
+  },
+  {
+    "feature":"cat__category_Classic Movies",
+    "mean_abs_shap":0.0045527668
+  },
+  {
+    "feature":"cat__category_Anime Features",
+    "mean_abs_shap":0.0021088834
+  },
+  {
+    "feature":"cat__category_Romantic TV Shows",
+    "mean_abs_shap":0.0018184165
+  },
+  {
+    "feature":"cat__category_Thrillers",
+    "mean_abs_shap":0.001713937
+  },
+  {
+    "feature":"cat__category_TV Shows",
+    "mean_abs_shap":0.0008103934
+  },
+  {
+    "feature":"cat__category_Classic & Cult TV",
+    "mean_abs_shap":0.0007766413
+  },
+  {
+    "feature":"cat__category_Music & Musicals",
+    "mean_abs_shap":0.0007696114
+  },
+  {
+    "feature":"cat__rating_NR",
+    "mean_abs_shap":0.0003865013
+  },
+  {
+    "feature":"cat__category_TV Horror",
+    "mean_abs_shap":0.0002374237
+  },
+  {
+    "feature":"cat__rating_Unknown",
+    "mean_abs_shap":0.000033291
+  },
+  {
+    "feature":"cat__category_Independent Movies",
+    "mean_abs_shap":0.0000304388
+  },
+  {
+    "feature":"cat__category_Spanish-Language TV Shows",
+    "mean_abs_shap":0.0000154582
+  },
+  {
+    "feature":"cat__category_Cult Movies",
+    "mean_abs_shap":0.0000108924
+  },
+  {
+    "feature":"cat__rating_TV-Y7-FV",
+    "mean_abs_shap":0.000006535
+  },
+  {
+    "feature":"cat__category_Sci-Fi & Fantasy",
+    "mean_abs_shap":0.0000045408
+  },
+  {
+    "feature":"cat__rating_UR",
+    "mean_abs_shap":0.0000000109
+  },
+  {
+    "feature":"cat__rating_NC-17",
+    "mean_abs_shap":0.0000000069
+  },
+  {
+    "feature":"cat__category_LGBTQ Movies",
+    "mean_abs_shap":0.0
+  },
+  {
+    "feature":"cat__category_Romantic Movies",
+    "mean_abs_shap":0.0
+  },
+  {
+    "feature":"cat__category_Sports Movies",
+    "mean_abs_shap":0.0
+  },
+  {
+    "feature":"cat__category_TV Sci-Fi & Fantasy",
+    "mean_abs_shap":0.0
+  }
+]

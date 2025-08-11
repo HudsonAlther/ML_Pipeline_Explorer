@@ -1,0 +1,42 @@
+{
+  "model_info": {
+    "name": "random_forest.shallow",
+    "description": "Shallow random forest for interpretability",
+    "pros": [
+      "More interpretable",
+      "Faster training",
+      "Less overfitting"
+    ],
+    "cons": [
+      "Lower capacity",
+      "May underfit complex data"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 0.06873941421508789,
+    "timestamp": "2025-07-29T14:37:40.153562",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9761904761904762,
+    "roc_auc": 0.999244094488189,
+    "f1_score": 0.9761904761904762,
+    "precision": 0.968503937007874,
+    "recall": 0.984,
+    "cv_mean": 0.9890695039653219,
+    "cv_std": 0.008552704491864066
+  },
+  "model_parameters": {
+    "model_type": "random_forest",
+    "variant": "shallow"
+  }
+}

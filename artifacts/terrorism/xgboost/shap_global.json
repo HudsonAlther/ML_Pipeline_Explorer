@@ -1,0 +1,10 @@
+[
+  {
+    "feature":"num__nkill",
+    "mean_abs_shap":0.7084178329
+  },
+  {
+    "feature":"num__nwound",
+    "mean_abs_shap":0.3889781237
+  }
+]

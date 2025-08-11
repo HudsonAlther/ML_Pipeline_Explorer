@@ -1,0 +1,39 @@
+{
+  "model_info": {
+    "name": "ensemble",
+    "description": "Soft voting of all base models",
+    "pros": [
+      "Stability",
+      "Reduced variance"
+    ],
+    "cons": [
+      "Larger footprint",
+      "Needs probabilities"
+    ],
+    "best_for": "General robust deployment",
+    "type": "ensemble"
+  },
+  "training_info": {
+    "training_time_seconds": 0.4561789035797119,
+    "timestamp": "2025-08-01T11:35:08.200819",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 7043,
+      "test_samples": 1761
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9988642816581488,
+    "roc_auc": 1.0,
+    "f1_score": 0.9991836734693877,
+    "cv_mean": 0.9990058834440931,
+    "cv_std": 0.0008521720037642321
+  },
+  "model_parameters": {
+    "model_type": "ensemble"
+  }
+}

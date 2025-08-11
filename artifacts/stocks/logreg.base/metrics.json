@@ -1,0 +1,42 @@
+{
+  "model_info": {
+    "name": "logreg.base",
+    "description": "Standard logistic regression",
+    "pros": [
+      "Interpretable",
+      "Fast training",
+      "Good baseline"
+    ],
+    "cons": [
+      "Limited to linear relationships",
+      "May underfit complex data"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 2.474492311477661,
+    "timestamp": "2025-07-29T14:37:24.715407",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9801587301587301,
+    "roc_auc": 0.998740157480315,
+    "f1_score": 0.9803921568627451,
+    "precision": 0.9615384615384616,
+    "recall": 1.0,
+    "cv_mean": 0.9781439337963647,
+    "cv_std": 0.00921117923713027
+  },
+  "model_parameters": {
+    "model_type": "logreg",
+    "variant": "base"
+  }
+}

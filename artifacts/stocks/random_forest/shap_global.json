@@ -1,0 +1,10 @@
+[
+  {
+    "feature":"feature_1",
+    "mean_abs_shap":0.240560208
+  },
+  {
+    "feature":"feature_0",
+    "mean_abs_shap":0.240560208
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "dataset_info": {
+    "shape": [
+      181691,
+      3
+    ],
+    "columns": [
+      "nkill",
+      "nwound",
+      "success"
+    ],
+    "dtypes": {
+      "nkill": "float64",
+      "nwound": "float64",
+      "success": "int64"
+    },
+    "missing_values": {
+      "nkill": 0,
+      "nwound": 0,
+      "success": 0
+    },
+    "target_distribution": {
+      "1": 161632,
+      "0": 20059
+    },
+    "data_quality_score": 0.5082557749145526
+  },
+  "dataset_description": "Predict whether reported attacks were successful",
+  "business_value": "Triage and risk scoring for incident records"
+}

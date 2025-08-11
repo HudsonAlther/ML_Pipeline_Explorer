@@ -1,0 +1,36 @@
+{
+  "dataset_info": {
+    "shape": [
+      8804,
+      5
+    ],
+    "columns": [
+      "release_year",
+      "duration",
+      "rating",
+      "category",
+      "is_movie"
+    ],
+    "dtypes": {
+      "release_year": "int64",
+      "duration": "float64",
+      "rating": "object",
+      "category": "object",
+      "is_movie": "int64"
+    },
+    "missing_values": {
+      "release_year": 0,
+      "duration": 0,
+      "rating": 0,
+      "category": 0,
+      "is_movie": 0
+    },
+    "target_distribution": {
+      "1": 6128,
+      "0": 2676
+    },
+    "data_quality_score": 0.8450136301681054
+  },
+  "dataset_description": "Classify Netflix titles as movie vs TV show",
+  "business_value": "Catalog hygiene and simple recsys signal"
+}

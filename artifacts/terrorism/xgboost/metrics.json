@@ -1,0 +1,14 @@
+{
+  "accuracy": 0.8895952007485071,
+  "f1_score": 0.9415722482742551,
+  "precision": 0.8895952007485071,
+  "recall": 1.0,
+  "roc_auc": 0.7101025395370174,
+  "target": "success",
+  "n_samples_train": 145352,
+  "n_samples_test": 36339,
+  "feature_names": [
+    "nkill",
+    "nwound"
+  ]
+}

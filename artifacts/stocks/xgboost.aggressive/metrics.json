@@ -1,0 +1,42 @@
+{
+  "model_info": {
+    "name": "xgboost.aggressive",
+    "description": "Aggressive XGBoost with more capacity",
+    "pros": [
+      "Higher performance potential",
+      "Better for complex patterns"
+    ],
+    "cons": [
+      "Higher risk of overfitting",
+      "Slower training",
+      "More complex"
+    ],
+    "type": "individual"
+  },
+  "training_info": {
+    "training_time_seconds": 0.05908012390136719,
+    "timestamp": "2025-07-29T14:37:44.531150",
+    "git_info": {
+      "commit_hash": "unknown",
+      "branch": "unknown",
+      "is_dirty": false
+    },
+    "dataset_info": {
+      "train_samples": 1007,
+      "test_samples": 252
+    }
+  },
+  "performance_metrics": {
+    "accuracy": 0.9841269841269841,
+    "roc_auc": 0.998992125984252,
+    "f1_score": 0.984251968503937,
+    "precision": 0.9689922480620154,
+    "recall": 1.0,
+    "cv_mean": 0.9860992069356189,
+    "cv_std": 0.0065958905459257075
+  },
+  "model_parameters": {
+    "model_type": "xgboost",
+    "variant": "aggressive"
+  }
+}
