@@ -298,15 +298,14 @@ def create_model_playground_view():
                             })
                             
                             fig = px.bar(
-                                prob_df, 
-                                x='Class', 
+                                prob_df,
+                                x='Class',
                                 y='Probability',
-                                title="Prediction Probabilities",
                                 color='Probability',
                                 color_continuous_scale='Blues'
                             )
                             fig.update_layout(
-                                title_font_size=14,
+                                title=None,
                                 xaxis_title="Prediction Class",
                                 yaxis_title="Probability"
                             )
