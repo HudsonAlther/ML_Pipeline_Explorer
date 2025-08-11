@@ -203,14 +203,89 @@ def create_model_playground_view():
                     result_col1, result_col2 = st.columns([1, 1])
                     
                     with result_col1:
-                        st.markdown("**Your Prediction:**")
-                        if prediction == 1:
-                            st.success(f"**{short_label}**")
-                        else:
-                            st.error(f"**{short_label}**")
-                        
+                        # Card styling (match model performance cards)
+                        st.markdown("""
+                            <style>
+                            .prediction-card {
+                                border: 1px solid #333;
+                                border-radius: 8px;
+                                padding: 15px;
+                                margin-bottom: 15px;
+                                background-color: #1a1a1a;
+                                position: relative;
+                                overflow: hidden;
+                                text-align: center;
+                            }
+                            .prediction-card::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 5px;
+                                height: 100%;
+                                background-color: #005E7B; /* primary_blue */
+                            }
+                            .prediction-label {
+                                font-size: clamp(12px, 1.1vw + 6px, 18px);
+                                color: #9E9E9E; /* gray */
+                                margin-bottom: 5px;
+                            }
+                            .prediction-value {
+                                font-size: clamp(24px, 2.2vw + 12px, 40px);
+                                font-weight: 800;
+                                color: white;
+                                line-height: 1.1;
+                            }
+                            .confidence-card {
+                                border: 1px solid #333;
+                                border-radius: 8px;
+                                padding: 15px;
+                                margin-bottom: 15px;
+                                background-color: #1a1a1a;
+                                position: relative;
+                                overflow: hidden;
+                                text-align: center;
+                            }
+                            .confidence-card::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 5px;
+                                height: 100%;
+                                background-color: #70B73F; /* lightgreen */
+                            }
+                            .confidence-label {
+                                font-size: clamp(12px, 1.1vw + 6px, 18px);
+                                color: #9E9E9E; /* gray */
+                                margin-bottom: 5px;
+                            }
+                            .confidence-value {
+                                font-size: clamp(24px, 2.2vw + 12px, 40px);
+                                font-weight: 800;
+                                color: white;
+                                line-height: 1.1;
+                            }
+                            </style>
+                        """, unsafe_allow_html=True)
+
+                        # Prediction card
+                        st.markdown(f"""
+                            <div class='prediction-card'>
+                                <div class='prediction-label'>Prediction</div>
+                                <div class='prediction-value'>{short_label}</div>
+                            </div>
+                        """, unsafe_allow_html=True)
+
+                        # Confidence card
                         if confidence is not None:
-                            st.metric("Confidence Level", f"{confidence * 100:.1f}%")
+                            conf_pct = confidence * 100.0
+                            st.markdown(f"""
+                                <div class='confidence-card'>
+                                    <div class='confidence-label'>Confidence</div>
+                                    <div class='confidence-value'>{conf_pct:.1f}%</div>
+                                </div>
+                            """, unsafe_allow_html=True)
                     
                     with result_col2:
                         if probability is not None:
@@ -251,13 +326,14 @@ def create_model_playground_view():
         
         # Navigation
         st.markdown("---")
-        # Actions
-        cols = st.columns([1,1,1])
+        cols = st.columns([1, 5, 1])
         with cols[0]:
             if st.button("Back to Model Analysis"):
                 set_session("current_view", "Model Analysis")
                 st.rerun() if hasattr(st, "rerun") else st.experimental_rerun()
         with cols[1]:
+            st.write("")
+        with cols[2]:
             if st.button("Try Different Model"):
                 set_session("current_view", "Model Selection")
                 st.rerun() if hasattr(st, "rerun") else st.experimental_rerun()

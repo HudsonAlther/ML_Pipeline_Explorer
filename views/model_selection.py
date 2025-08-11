@@ -145,9 +145,6 @@ def create_training_popup(video_b64):
 def model_selection_view():
     st.header("Step 3: Choose Your Model")
     st.markdown("**Select the algorithm that will learn from your data**")
-    
-    # Important: Training happens via CLI, UI shows simulation
-    st.info("💡 **Note:** Models must be pre-trained using `trainer_refactored.py`. The UI shows training simulation and loads existing artifacts.")
 
     # Selection Guide removed per request
 
