@@ -305,9 +305,10 @@ def create_model_playground_view():
                                 color_continuous_scale='Blues'
                             )
                             fig.update_layout(
-                                title=None,
+                                title_text="",
                                 xaxis_title="Prediction Class",
-                                yaxis_title="Probability"
+                                yaxis_title="Probability",
+                                margin=dict(t=10)
                             )
                             st.plotly_chart(fig, use_container_width=True)
                     
