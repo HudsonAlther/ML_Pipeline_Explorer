@@ -49,7 +49,13 @@ def create_model_comparison_chart(df, ds_key):
         showlegend=True,
         **DARK_THEME
     )
-    fig.update_traces(marker_color=APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B'))
+    # Theme-aware bar color: light theme -> accent blue; dark -> primary blue
+    import streamlit as st
+    base = str(st.get_option("theme.base") or "dark").lower()
+    bar_color = APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B')
+    if base == 'light':
+        bar_color = APP_CONFIG.get('colors', {}).get('lightblue', '#008CA5')
+    fig.update_traces(marker_color=bar_color)
     fig = apply_plotly_theme(fig)
     
     return fig
@@ -72,7 +78,12 @@ def create_simple_model_comparison(df, ds_key):
         barmode="group", height=420, legend_title="Metric",
         **DARK_THEME
     )
-    fig.update_traces(marker_color=APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B'))
+    import streamlit as st
+    base = str(st.get_option("theme.base") or "dark").lower()
+    bar_color = APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B')
+    if base == 'light':
+        bar_color = APP_CONFIG.get('colors', {}).get('lightblue', '#008CA5')
+    fig.update_traces(marker_color=bar_color)
     fig = apply_plotly_theme(fig)
     return fig
 

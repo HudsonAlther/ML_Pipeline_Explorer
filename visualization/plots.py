@@ -52,12 +52,16 @@ def plot_threshold_dashboard(y_true, y_prob):
     blue = APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B')
     fig.add_trace(go.Scatter(x=thr, y=prec[:-1], mode="lines", name="Precision", line=dict(color=green)))
     fig.add_trace(go.Scatter(x=thr, y=rec[:-1], mode="lines", name="Recall", line=dict(color=blue)))
+    # Theme-aware font color
+    import streamlit as st
+    base = str(st.get_option("theme.base") or "dark").lower()
+    font_color = '#FFFFFF' if base == 'dark' else '#000000'
     fig.update_layout(
-        title="Precision-Recall vs Threshold", 
-        xaxis_title="Threshold", 
-        yaxis_title="Score", 
+        title="Precision-Recall vs Threshold",
+        xaxis_title="Threshold",
+        yaxis_title="Score",
         height=280,
-        font=dict(color='white'),
-        title_font_color='white'
+        font=dict(color=font_color),
+        title_font_color=font_color,
     )
     return apply_plotly_theme(fig)
