@@ -8,22 +8,25 @@ from config.app_config import APP_CONFIG
 from visualization.viz_factory import create_matplotlib_figure, apply_plotly_theme
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
-
-# Set dark theme for all matplotlib plots
-plt.style.use('dark_background')
-sns.set_theme(style="darkgrid")
+import streamlit as st
 
 def create_confusion_matrix_plot(y_true, y_pred, title="Confusion Matrix"):
     """Create a confusion matrix plot with dark theme"""
     try:
         cm = confusion_matrix(y_true, y_pred)
-        fig = create_matplotlib_figure(6, 4, facecolor='#1a1a1a')
+        # Theme-aware colors
+        base = str(st.get_option("theme.base") or "dark").lower()
+        is_light = base == "light"
+        txt_color = 'black' if is_light else 'white'
+        ax_face = '#FFFFFF' if is_light else '#1a1a1a'
+        fig = create_matplotlib_figure(6, 4, facecolor=ax_face)
         ax = fig.gca()
         sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax, 
                    cbar_kws={'label': 'Count'})
-        ax.set_xlabel("Predicted", color='white')
-        ax.set_ylabel("Actual", color='white')
-        ax.set_title(title, color='white', fontsize=14, fontweight='bold')
+        ax.set_facecolor(ax_face)
+        ax.set_xlabel("Predicted", color=txt_color)
+        ax.set_ylabel("Actual", color=txt_color)
+        ax.set_title(title, color=txt_color, fontsize=14, fontweight='bold')
         plt.tight_layout()
         return fig
     except Exception as e:
@@ -32,13 +35,18 @@ def create_confusion_matrix_plot(y_true, y_pred, title="Confusion Matrix"):
 
 # Confusion matrix heatmap
 def plot_confusion_heatmap(cm, title="Confusion Matrix"):
-    fig = create_matplotlib_figure(4, 3, facecolor='#1a1a1a')
+    base = str(st.get_option("theme.base") or "dark").lower()
+    is_light = base == "light"
+    txt_color = 'black' if is_light else 'white'
+    ax_face = '#FFFFFF' if is_light else '#1a1a1a'
+    fig = create_matplotlib_figure(4, 3, facecolor=ax_face)
     ax = fig.gca()
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax,
                cbar_kws={'label': 'Count'})
-    ax.set_xlabel("Predicted", color='white')
-    ax.set_ylabel("Actual", color='white')
-    ax.set_title(title, color='white', fontsize=12, fontweight='bold')
+    ax.set_facecolor(ax_face)
+    ax.set_xlabel("Predicted", color=txt_color)
+    ax.set_ylabel("Actual", color=txt_color)
+    ax.set_title(title, color=txt_color, fontsize=12, fontweight='bold')
     return fig
 
 # Threshold dashboard (requires y_true, y_prob)
