@@ -26,8 +26,7 @@ APP_CONFIG = {
     "compact_figsize_scale": 0.7,   # Scale down figsize when compact_plots is True
     "transparent_plots": False,     # Use non-transparent backgrounds
     "matplotlib_facecolor": "#2a2a2a",  # Grey background for Matplotlib figures
-    # Plotly background will be theme-aware via viz_factory.apply_plotly_theme
-    "plotly_bgcolor": "#2a2a2a",        # Default for dark mode
+    "plotly_bgcolor": "#2a2a2a",        # Grey background for Plotly figures
     "plotly_height_scale": 0.8,     # Scale factor for Plotly figure heights
     # Approved color palette
     "colors": {

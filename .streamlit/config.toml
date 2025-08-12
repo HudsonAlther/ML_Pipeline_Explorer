@@ -1,0 +1,14 @@
+[theme]
+base = "dark"
+primaryColor = "#005E7B"            # primary_blue
+backgroundColor = "#1A1A1A"         # dark background
+secondaryBackgroundColor = "#2A2A2A" # panels/cards
+textColor = "#FFFFFF"
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+headless = true
+
+

@@ -8,25 +8,22 @@ from config.app_config import APP_CONFIG
 from visualization.viz_factory import create_matplotlib_figure, apply_plotly_theme
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
-import streamlit as st
+
+# Set dark theme for all matplotlib plots
+plt.style.use('dark_background')
+sns.set_theme(style="darkgrid")
 
 def create_confusion_matrix_plot(y_true, y_pred, title="Confusion Matrix"):
     """Create a confusion matrix plot with dark theme"""
     try:
         cm = confusion_matrix(y_true, y_pred)
-        # Theme-aware colors
-        base = str(st.get_option("theme.base") or "dark").lower()
-        is_light = base == "light"
-        txt_color = 'black' if is_light else 'white'
-        ax_face = '#FFFFFF' if is_light else '#1a1a1a'
-        fig = create_matplotlib_figure(6, 4, facecolor=ax_face)
+        fig = create_matplotlib_figure(6, 4, facecolor='#1a1a1a')
         ax = fig.gca()
         sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax, 
                    cbar_kws={'label': 'Count'})
-        ax.set_facecolor(ax_face)
-        ax.set_xlabel("Predicted", color=txt_color)
-        ax.set_ylabel("Actual", color=txt_color)
-        ax.set_title(title, color=txt_color, fontsize=14, fontweight='bold')
+        ax.set_xlabel("Predicted", color='white')
+        ax.set_ylabel("Actual", color='white')
+        ax.set_title(title, color='white', fontsize=14, fontweight='bold')
         plt.tight_layout()
         return fig
     except Exception as e:
@@ -35,18 +32,13 @@ def create_confusion_matrix_plot(y_true, y_pred, title="Confusion Matrix"):
 
 # Confusion matrix heatmap
 def plot_confusion_heatmap(cm, title="Confusion Matrix"):
-    base = str(st.get_option("theme.base") or "dark").lower()
-    is_light = base == "light"
-    txt_color = 'black' if is_light else 'white'
-    ax_face = '#FFFFFF' if is_light else '#1a1a1a'
-    fig = create_matplotlib_figure(4, 3, facecolor=ax_face)
+    fig = create_matplotlib_figure(4, 3, facecolor='#1a1a1a')
     ax = fig.gca()
     sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", ax=ax,
                cbar_kws={'label': 'Count'})
-    ax.set_facecolor(ax_face)
-    ax.set_xlabel("Predicted", color=txt_color)
-    ax.set_ylabel("Actual", color=txt_color)
-    ax.set_title(title, color=txt_color, fontsize=12, fontweight='bold')
+    ax.set_xlabel("Predicted", color='white')
+    ax.set_ylabel("Actual", color='white')
+    ax.set_title(title, color='white', fontsize=12, fontweight='bold')
     return fig
 
 # Threshold dashboard (requires y_true, y_prob)
@@ -60,16 +52,12 @@ def plot_threshold_dashboard(y_true, y_prob):
     blue = APP_CONFIG.get('colors', {}).get('primary_blue', '#005E7B')
     fig.add_trace(go.Scatter(x=thr, y=prec[:-1], mode="lines", name="Precision", line=dict(color=green)))
     fig.add_trace(go.Scatter(x=thr, y=rec[:-1], mode="lines", name="Recall", line=dict(color=blue)))
-    # Theme-aware font color
-    import streamlit as st
-    base = str(st.get_option("theme.base") or "dark").lower()
-    font_color = '#FFFFFF' if base == 'dark' else '#000000'
     fig.update_layout(
-        title="Precision-Recall vs Threshold",
-        xaxis_title="Threshold",
-        yaxis_title="Score",
+        title="Precision-Recall vs Threshold", 
+        xaxis_title="Threshold", 
+        yaxis_title="Score", 
         height=280,
-        font=dict(color=font_color),
-        title_font_color=font_color,
+        font=dict(color='white'),
+        title_font_color='white'
     )
     return apply_plotly_theme(fig)
