@@ -49,11 +49,6 @@ python trainer_refactored.py
 ```
 - The Streamlit app only loads artifacts from `artifacts/` and plays a simulation video during “training”.
 
-## Deploy on Streamlit Cloud
-1) Push this repo to GitHub with Git LFS enabled for `*.pkl`, `*.mp4`, `*.csv`.
-2) In Streamlit Cloud, create a new app and set the main file to `app_refactored.py`.
-3) Ensure `requirements.txt` is present (this repo includes it).
-
 ## Repository Layout
 - `app_refactored.py`: Main Streamlit app (entry point)
 - `trainer_refactored.py`: CLI training script (offline)
